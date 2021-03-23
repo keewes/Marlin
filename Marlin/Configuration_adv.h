@@ -820,11 +820,12 @@
 //
 // Add the G35 command to read bed corners to help adjust screws. Requires a bed probe.
 //
-//#define ASSISTED_TRAMMING
+#define ASSISTED_TRAMMING
 #if ENABLED(ASSISTED_TRAMMING)
 
   // Define positions for probe points.
-  #define TRAMMING_POINT_XY { { 76, 33 }, { 261, 33 }, { 261, 218 }, { 76, 218 } }
+  #define TRAMMING_POINT_XY { { 33, 39 }, { 208, 39 }, { 208, 208 }, { 33, 208 } }
+//TRAMMING_POINT_XY { { 76, 39 }, { 245, 39 }, { 245, 207 }, { 76, 207 } }
 
   // Define position names for probe points.
   #define TRAMMING_POINT_NAME_1 "Front-Left"
@@ -1158,7 +1159,7 @@
 
 #if HAS_DISPLAY
   // The timeout (in ms) to return to the status screen from sub-menus
-  #define LCD_TIMEOUT_TO_STATUS 17000
+  //#define LCD_TIMEOUT_TO_STATUS 15000
 
   #if ENABLED(SHOW_BOOTSCREEN)
     #define BOOTSCREEN_TIMEOUT 4000      // (ms) Total Duration to display the boot screen(s)
